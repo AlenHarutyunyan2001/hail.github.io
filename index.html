@@ -1,0 +1,108 @@
+<!Doctype>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>-->
+    <script src="Javascript/javascript.js"></script>
+    <script src="Javascript/jq.js"></script>
+
+  </head>
+  <body class="body" onload="myFunction()">
+
+    <video autoplay loop id="video-background" muted plays-inline>
+      <source src="https://coverr.co/s3/mp4/Spacious.mp4" type="video/mp4">
+    </video>
+
+    <div class="gallery">
+      <a href="/gallery"><div id="button">Button</div></a>
+    </div>
+
+    <!---
+    <script>
+      var timer = setInterval("MyFunction()", 5000);
+      var count = 0;
+
+      function MyFunction(){
+        count++;
+        if(count)
+          alert("You have already " + (count*5) + " second in our Website");
+      }
+    </script>
+
+
+    <script>
+    window.onload = function(){
+      timer();
+      timer1();
+    }
+
+    var counter = 0;
+    var minute = 0;
+    var hour = 0;
+    var n = 0; document.write(n);
+    function timer1(){
+      setTimeout("timer1()", 6000);
+      n++;
+      document.getElementById("count1").innerHTML = n;
+    }
+    function timer(){
+      setTimeout("timer()", 100);
+      counter++;
+      document.getElementById("count").innerHTML = counter;
+
+      if(counter == 60*n){
+
+        document.getElementById("minute").innerHTML = minute+1+":";
+      }
+    }
+    </script>
+    <h1 id="hour">00:</h1><h1 id="minute">00:</h1><h1 id="count">-1</h1>
+    <h1 id="count1">-1</h1>
+      --->
+
+      <menu class="menu">
+        <img src="images/xbox_menu1600.png" class="openclose" id="open" style="width:50px; height:50px;"></img>
+        <img  src="images/Graphicloads-100-Flat-Close.ico" class="openclose" id="close" style="width:50px; height: 50px; display:none;"></img>
+        <ul  style="display:none" class="ul">
+          <a href="https://hailpm.github.io/index.html"><li id="home">Home</li></a>
+          <a href="https://hailpm.github.io/otzyvy.html"><li id="aboutus">About us</li></a>
+          <a href=""><li id="photos">Photos</li></a>
+          <a href=""><li id="videos">Videos</li></a>
+        </ul>
+        <div id="vk"><a href="https://vk.com/alen_2001"><img src="images/vk.png" id="vkimg" style="width:30px; padding:5px; padding-top:10px;"></img></a></div>
+        <div id="facebook"><a href="https://web.facebook.com/alen.harutyunyan.906"><img src="images/facebook.png" id="facebookimg" style="width:30px; padding:5px; padding-top:10;"></img></a></div>
+        <div id="instagram"><a href="https://www.instagram.com/alenharutyunyan/"><img src="images/instagram.png" id="instagramimg" style="width:30px; padding:5px; padding-top:10;"></img></a></div>
+
+
+
+        <script>
+          $(".openclose").click(function(){
+            $("ul").toggle();
+            $("menu").toggleClass("menucss");
+            $(".openclose").toggle();
+            $("video").toggleClass("background");
+            $("#vk").toggleClass("socseti");
+            $("#facebook").toggleClass("socseti");
+            $("#instagram").toggleClass("socseti");
+          });
+        </script>
+      </menu>
+
+      <img class="images" src="images/computer.png"></img>
+      <img class="images" src="images/slide.png" style="display:none;"></img>
+
+      <script>
+      var myVar;
+
+      function myFunction() {
+        myVar = setInterval(change, 3000);
+      }
+
+        function change(){
+          $(".images").toggle("slow");
+        }
+      </script>
+      <canvas id="canv"></canvas>
+  <body>
+</html>

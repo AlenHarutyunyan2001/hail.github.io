@@ -1,0 +1,264 @@
+<!Doctype>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="CSS/otzyvycss.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="Javascript/javascript.js"></script>
+
+  </head>
+  <body class="body" onload="interval()">
+  <!---
+    <div class="background">
+      <div class="header-row">
+        <ul style="font-family:Trebuchet MS, sans-serif">
+          <li>Section</li>
+          <li>Section</li>
+          <li>Section</li>
+          <li>Section</li>
+          <li>Section</li>
+          <li>Section</li>
+        </ul>
+      </div>
+
+      <img class="images" id="1" src="images/computer.png"></img>
+      <img class="images" id="2" src="images/slide.png"></img>
+      <div class="overout">Enter mouse</div>
+
+
+      <!-
+      <script>
+        var i = 0;
+        $(".images").on("mouseover", function(){
+          i++;
+          $(".overout").text("You enter mouse on the images "+i);
+        });
+
+        var a = prompt("What image do you want? 1 or 2?")
+        var images = $(".images");
+
+          alert(images[a-1].id);
+
+      </script>
+
+
+
+      <script>
+
+      var myVar;
+
+      function myFunction() {
+        myVar = setInterval(mouseover, 3000);
+      }
+
+        function change(){
+          $(".images").toggle("slow");
+        }
+
+        function mouseover(){
+        $(".images").on("mouseover",function(){
+          $(".images").hide();
+        });
+      }
+      </script>
+	  ????????????????
+    <div style="border:1px solid green; border-radius: 30px;  width: 30px; height: 30px; background-color: green; z-index:1;" id="play"></div>
+    <div style="width: 30px; height: 30px; background-color: blue;" id="volume"></div>
+
+      <video controls  id="video-background" plays-inline>
+        <source src="https://s3.eu-central-1.amazonaws.com/geekbrains-cdn/GB+final.mp4" type="video/mp4">
+      </video>
+
+	  <img style="width:300px; height:300px;" id="aaa" src="https://cs540107.userapi.com/c836525/v836525409/73be2/10wUmCtbyxI.jpg"></img>
+	  <button id="myButton">Click me!!!</button>
+
+	  <script>
+		var x = prompt();
+
+		var str = "xgIHvz7tYqA";
+
+		$("#myButton").on("click", function(){
+			$("#aaa").attr("src", "https://i.stack.imgur.com/CkNds.jpg");
+		});
+	  </script>
+
+      <script>
+      var myVideo = document.getElementById("video-background");
+
+        $("#play").on("click", function(){
+          if(myVideo.paused){
+          myVideo.play();
+        }else {
+          myVideo.pause();
+        }
+        });
+
+        $("#volume").on("click", function(){
+          if (!myVideo.muted) {
+            myVideo.muted = true;
+          }else{
+            myVideo.muted = false;
+          }
+        });
+
+      </script>
+
+      <div id="eyes_exercises" style="display:none;">
+          <div class="close_button" style="width:39px; height:39px; position:absolute; top:32px; left:906px; z-index:100;"></div>
+            <div id="gic1" style="background-color:white; position:absolute; top:50px; left:900px; width:50px; height:3px; transform:rotate(45deg);"></div>
+            <div id="gic2" style="background-color:white; position:absolute; top:50px; left:900px; width:50px; height:3px; transform:rotate(-45deg);"></div>
+            <div style="background-color:orange; width: 100px; height:30px; border:1px solid orange; border-radius:10px; position:absolute; top:635px; left:450px; font-size:10px; font-family:Arial; padding-top:15px;" id="start" class="start_button">Care about your body</div>
+
+          <iframe style="position:absolute; top:100px; left:10%;" width="800" height="500" type="video/mp4" src="https://www.youtube.com/embed/0gep6TwX3r4"></iframe>
+
+      </div>
+
+      <div id="choose_sex" style="display:none;">
+
+        <div style="font-family: Arial;">Man<input type="checkbox" value="man" id="red"></input></div>
+        <div style="font-family: Arial;">Woman<input type="checkbox" value="woman"></input></div>
+        <div style="background-color:orange; width: 100px; height:30px; border:1px solid orange; border-radius:10px;" id="choose" class="start_button"></div>
+        <div class="close_button" style="width:39px; height:39px; position:absolute; top:32px; left:906px; z-index:100;"></div>
+          <div style="background-color:white; position:absolute; top:50px; left:900px; width:50px; height:3px; transform:rotate(45deg);"></div>
+          <div style="background-color:white; position:absolute; top:50px; left:900px; width:50px; height:3px; transform:rotate(-45deg);"></div>
+
+      </div>
+
+
+      <script>
+
+        function myFunctions(){
+          setinterval();
+          do_eyes_exersices();
+          close_function();
+          choose_sex_show();
+          choose_sex();
+        }
+
+        function setinterval(){
+          setInterval("do_eyes_exersices()", 1200000);
+        }
+
+        function do_eyes_exersices(){
+          alert("Do eyes exercises!!!");
+          $("#eyes_exercises").show();
+        }
+
+        function close_function(){
+          $(".close_button").on("mouseover", function(){
+            $(".close_button").css("cursor", "pointer");
+          });
+
+          $(".close_button").on("click", function(){
+            $("#eyes_exercises").hide();
+            $("#choose_sex").hide();
+          });
+        }
+
+        function choose_sex_show(){
+          $(".start_button").on("mouseover", function(){
+            $(".start_button").css("cursor", "pointer");
+          });
+
+          $(".start_button").on("click", function(){
+            $("#eyes_exercises").hide();
+            $("#choose_sex").show();
+          });
+        }
+
+        function choose_sex(){
+
+          $("#choose").on("click", function(){
+
+            if ($("input:checked").val() == "man") {
+              alert("Делай 10 отжиманий!!!")
+            }
+
+            if ($("input:checked").val() == "woman") {
+              alert("Делай 10 приседаний!!!")
+            }
+
+            if(!($("input:checked").val())){
+              alert("Enter your sex");
+            }
+          });
+        }
+
+
+        $(".close_button").on("mouseover", function(){
+          $("#gic1").css("background-color", "red");
+          $("#gic2").css("background-color", "red");
+
+        });
+
+        if (!($(".close_button").on("mouseover"))) {
+          $("#gic1").css("background-color", "white");
+          $("#gic2").css("background-color", "white");
+        }
+
+      </script>
+	--->
+
+		<div id="img_1" style="width:300px; height:300px; background-color:gray;"></div>
+		<button id="button_1">Change</button>
+		<img id="img_2" style="width:300px; height:300px;" src="https://www.ledr.com/colours/grey.jpg"></img>
+		<button id="button_2">Change</button>
+
+		<script>
+			$("#button_1").on("click", function(){
+			var color = prompt("what color?");
+				$("#img_1").attr("style", "background-color:"+color+"; width:300px; height:300px;");
+      });
+
+			$("#button_2").on("click", function(){
+			var color = prompt("what color?");
+			if(color == "green"){
+				$("#img_2").attr("src", "http://i.ytimg.com/vi/8-0e-t-42ss/maxresdefault.jpg");
+			}
+			else if(color == "blue"){
+				$("#img_2").attr("src", "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Solid_blue.svg/225px-Solid_blue.svg.png");
+			}});
+		</script>
+
+    <section id="oursection">
+      <div class>
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <div></div>
+          <div></div>
+          <div></div>
+        </ul>
+      </div>
+    </section>
+
+
+    <h1 id="minutes">00:</h1>
+    <h1>M</h1>
+    <h1 id="seconds">0</h1>
+    <h1>S</h1>
+    <script>
+      var second = 60;
+      var minute = prompt("How minute do you want?");
+
+      function getNewSecond(){
+            second--;
+            document.getElementById("seconds").innerHTML = second;
+            document.getElementById("minutes").innerHTML = minute;
+            while (second == 0) {
+              second = 60;
+              minute--;
+            };
+          };
+
+
+
+        function interval(){
+          setInterval("getNewSecond()", 1000);
+        };
+
+    </script>
+
+  </body>
+</html>
